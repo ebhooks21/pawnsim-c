@@ -1,13 +1,13 @@
 /**
- * File name: PawnSim.c
+ * File name: PawnSim.cpp
  * Author: Eric Hooks, 2026
  * Purpose: Entry point for the PawnSim game.
  */
 
- #include <stdio.h>
+ #include <iostream>
 
  int main() {
-	printf("Test");
+	std::cout << "Test" << std::endl;
 
 	return 0;
  }
