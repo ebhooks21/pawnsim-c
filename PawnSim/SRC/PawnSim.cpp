@@ -5,9 +5,15 @@
  */
 
  #include <iostream>
+ #include "HEADER/Game.h"
 
  int main() {
-	std::cout << "Test" << std::endl;
+	//Create a new game instance
+	Game* game = new Game("Ye Olde Pawn Shoppe");
+
+	std::cout << game->getName() << std::endl;
+
+	delete game;
 
 	return 0;
  }
