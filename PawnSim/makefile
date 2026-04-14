@@ -1,5 +1,5 @@
 CC = gxx
-OBJECTS = BUILD\PawnSim.o
+OBJECTS = BUILD\PawnSim.o BUILD\Game.o
 LIBS = LIB\PDCURSES.A
 
 clean:
@@ -18,3 +18,6 @@ BUILD\PAWNSIM.EXE: $(OBJECTS)
 
 BUILD\PawnSim.o: SRC\PawnSim.cpp
 	$(CC) -c SRC\PawnSim.cpp -o BUILD\PawnSim.o
+
+BUILD\Game.o: SRC\Game.cpp
+	$(CC) -c SRC\Game.cpp -o BUILD\Game.o
