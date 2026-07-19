@@ -3,7 +3,9 @@
         {
             "name": "Linux",
             "includePath": [
-                "${workspaceFolder}/**"
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/PawnSim/SRC",
+                "/home/ehooks/DOS/DJGPP/INCLUDE/"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/g++",
