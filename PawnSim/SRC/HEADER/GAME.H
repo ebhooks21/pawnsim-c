@@ -8,10 +8,14 @@
 #define GAME_H
 
 #include "SCREEN.H"
+#include "GSTATE.H"
 
 typedef struct game_t {
 	//Reference to the screen
 	Screen* screen;
+
+	///Reference to the game state
+	GSTATE state;
 } Game;
 
 /**

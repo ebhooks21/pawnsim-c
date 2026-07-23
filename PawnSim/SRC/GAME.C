@@ -7,6 +7,7 @@
 #include <GRXKEYS.H>
 #include "HEADER/GAME.H"
 #include "HEADER/SCREEN.H"
+#include "HEADER/GSTATE.H"
 
 /**
  * Function to start thhe game.
@@ -14,6 +15,9 @@
 void startGame(Game* g) {
 	g->screen = createGameScreen();
 	(g->screen)->game = g;
+
+	//Set the game state
+	g->state = MENU;
 
 	//Initialize the screen
 	initScreen(g->screen);
