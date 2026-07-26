@@ -30,6 +30,11 @@ void destroyScreen(Screen* s);
 void drawScreenBorder(Screen* s);
 
 /**
+ * Function to render the shop status area.
+ */
+void renderStatusBar(Screen* s, Game* g);
+
+/**
  * Function to render the screen.
  */
 void render(Screen* s, Game* g);

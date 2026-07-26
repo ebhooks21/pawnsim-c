@@ -4,7 +4,9 @@
  * Purpose: To implement the screen functions.
  */
 #include "HEADER/SCREEN.H"
+#include "HEADER/GAME.H"
 #include <GRX20.H>
+#include <stdio.h>
 
 /**
  * Function to initialize the screen.
@@ -30,9 +32,26 @@ void drawScreenBorder(Screen* s) {
 }
 
 /**
+ * Function to render the shop status area.
+ */
+void renderStatusBar(Screen* s, Game* g) {
+    char money[10];
+    snprintf(money, sizeof(money), "Cash: $%d", ((g->shop)->money));
+
+    //Draw the border for the money area
+    GrBox(0, 0, ((int)(GrMaxX() / 4) - 1), 35, GrWhite()); 
+
+    //Draw the money amount
+    GrTextXY(2, 12, money, GrWhite(), GrBlack());
+}
+
+/**
  * Function to render the game screen.
  */
 void render(Screen* s, Game* g) {
 	//Draw the screen border
 	drawScreenBorder(s);
+
+    //Render the status bar
+    renderStatusBar(s, g);
 }
