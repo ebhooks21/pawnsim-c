@@ -14,7 +14,6 @@
  */
 void startGame(Game* g) {
 	g->screen = createGameScreen();
-	(g->screen)->game = g;
 
 	//Set the game state
 	g->state = MENU;
@@ -50,10 +49,9 @@ Screen* createGameScreen(void) {
 void startGameLoop(Game* g) {
 	int running = 1;
 
-	//Draw the screen border
-	drawScreenBorder(g->screen);
-
 	do {
+		render(g->screen, g);
+
 		if(GrKeyPressed != 0) {
 			if(GrKeyRead() == GrKey_Escape) {
 				running = 0;

@@ -29,4 +29,9 @@ void destroyScreen(Screen* s);
  */
 void drawScreenBorder(Screen* s);
 
+/**
+ * Function to render the screen.
+ */
+void render(Screen* s, Game* g);
+
 #endif /* SCREEN_H */

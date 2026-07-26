@@ -28,3 +28,11 @@ void destroyScreen(Screen* s) {
 void drawScreenBorder(Screen* s) {
     GrBox(0, 0, GrMaxX(), GrMaxY(), GrWhite());
 }
+
+/**
+ * Function to render the game screen.
+ */
+void render(Screen* s, Game* g) {
+	//Draw the screen border
+	drawScreenBorder(s);
+}
