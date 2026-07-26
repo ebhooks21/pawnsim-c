@@ -23,16 +23,16 @@ void startGame(Game* g) {
 	initScreen(g->screen);
 
 	//Start the game loop
-	startGameLoop(g);
-
-	//Destroy the screen
-	destroyScreen(g->screen);
+	startGameLoop(g);	
 }
 
 /**
  * Function to destroy the game.
  */
 void destroyGame(Game* g) {
+	//Destroy the screen
+	destroyScreen(g->screen);
+
 	//Release dynamic memory
 	free(g->screen);
 }

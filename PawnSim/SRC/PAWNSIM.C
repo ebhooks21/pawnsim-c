@@ -25,7 +25,7 @@
 	free(g);
 
 	//Output thank you message
-	printf("Thank you for playing.\r\n");
+	printf("Thank you for playing.\n");
 
 	return 0;
  }
