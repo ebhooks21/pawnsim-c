@@ -1,5 +1,5 @@
 CC = gcc
-OBJECTS = BUILD\PawnSim.o BUILD\Game.o BUILD\Screen.o
+OBJECTS = BUILD\PawnSim.o BUILD\Game.o BUILD\Screen.o BUILD\Shop.o
 LIBS = -lgrx20
 
 clean:
@@ -24,3 +24,6 @@ BUILD\Game.o: SRC\Game.c
 
 BUILD\Screen.o: SRC\Screen.c
 	$(CC) -c SRC\Screen.c -o BUILD\Screen.o
+
+BUILD\Shop.o: SRC\Shop.c
+	$(CC) -c SRC\Shop.c -o BUILD\Shop.o

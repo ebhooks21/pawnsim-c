@@ -8,6 +8,7 @@
 #include "HEADER/GAME.H"
 #include "HEADER/SCREEN.H"
 #include "HEADER/GSTATE.H"
+#include "HEADER/SHOP.H"
 
 /**
  * Function to start thhe game.
@@ -20,6 +21,9 @@ void startGame(Game* g) {
 
 	//Initialize the screen
 	initScreen(g->screen);
+
+	//Initialize the shop
+	g->shop =  initShop("Test Shop");
 
 	//Start the game loop
 	startGameLoop(g);	

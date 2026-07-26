@@ -9,13 +9,17 @@
 
 #include "SCREEN.H"
 #include "GSTATE.H"
+#include "SHOP.H"
 
 typedef struct game_t {
 	//Reference to the screen
 	Screen* screen;
 
-	///Reference to the game state
+	//Reference to the game state
 	GSTATE state;
+
+	//Reference to the shop
+	Shop* shop;
 } Game;
 
 /**
