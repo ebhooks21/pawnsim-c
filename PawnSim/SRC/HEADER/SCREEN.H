@@ -12,8 +12,6 @@ typedef struct game_t Game;
 
 //Define the Screen
 typedef struct screen_t {
-	//Reference to the game object
-	Game* game;
 } Screen;
 
 /**
